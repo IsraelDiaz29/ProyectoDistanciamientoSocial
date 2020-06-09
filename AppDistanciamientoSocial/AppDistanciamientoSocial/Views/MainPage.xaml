@@ -6,11 +6,71 @@
              mc:Ignorable="d"
              x:Class="AppDistanciamientoSocial.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
 
+    <ScrollView>
+        <Grid RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!--  background -->
+            <Image Source="HeaderBackground.png" Aspect="AspectFill"/>
+            <Image Source="CurvedMask.png" Aspect="Fill"
+                   VerticalOptions="End"/>
+
+            <!-- text -->
+            <StackLayout Grid.Row="1" Padding="0,50,0,0">
+                <Label Text="Bienvenido a tu"
+                       FontAttributes="Bold"
+                       FontSize="Title"
+                       HorizontalOptions="Center"
+                       VerticalOptions="CenterAndExpand" 
+                       Style="{StaticResource ProfileNameLabel}"/>
+
+                <Label Text="aplicacion de "
+                       HorizontalOptions="Center"
+                       VerticalOptions="CenterAndExpand" 
+                       Style="{StaticResource ProfileTagLabel}"/>
+            </StackLayout>
+
+            <!-- text -->
+            <Label Text="Distanciamiento &#10;        Social"
+                HorizontalOptions="Center"
+                FontSize="Title"
+                TextColor="DarkBlue"
+                VerticalOptions="CenterAndExpand"
+                Grid.Row="3"
+                Style="{StaticResource MainBodyLabel}"
+                   Margin="20,0"/>
+
+            <Label Text="Ayudando en la nueva realidad"
+                       HorizontalOptions="Center"
+                       TextColor="White"
+                       FontSize=""
+                   Grid.Row="0"
+                       VerticalOptions="CenterAndExpand" 
+                       Style="{StaticResource ProfileTagLabel}"/>
+
+
+            <!-- button -->
+            <Button Text="Iniciar"
+                    BackgroundColor="DarkSlateBlue"
+                TextColor="White"
+                FontSize="Subtitle"   
+                Style="{StaticResource FollowButton}"
+                Grid.Row="4"
+                Margin="20,0"/>
+
+
+            <!-- Logo image -->
+            <Image Source="persona.png" 
+                   VerticalOptions="End" HorizontalOptions="Center"
+                   HeightRequest="100" WidthRequest="100"
+                   TranslationY="50"/>
+        </Grid>
+    </ScrollView>
 </ContentPage>
