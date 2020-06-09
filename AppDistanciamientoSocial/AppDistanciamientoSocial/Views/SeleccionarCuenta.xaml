@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AppDistanciamientoSocial.Views.SeleccionarCuenta">
+
+    <ScrollView>
+        <Grid RowSpacing="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!--  background -->
+            <Image Source="HeaderBackground.png" Aspect="AspectFill"/>
+            <Image Source="CurvedMask.png" Aspect="Fill"
+                   VerticalOptions="End"/>
+
+            <!-- text -->
+            <StackLayout Spacing="10" Grid.Row="1" Padding="0,50,0,0">
+                <Label Text="Selecciona tu"
+                       FontAttributes="Bold"
+                       FontSize="Title"
+                       HorizontalOptions="Center"
+                       VerticalOptions="CenterAndExpand" 
+                       Style="{StaticResource ProfileNameLabel}"/>
+
+                <Label Text="Cuenta "
+                       HorizontalOptions="Center"
+                       FontSize="Title"
+                       FontAttributes="Italic"
+                       VerticalOptions="CenterAndExpand" 
+                       Style="{StaticResource ProfileTagLabel}"/>
+
+            </StackLayout>
+
+
+            <Label Text="Ayudando en la nueva realidad"
+                       HorizontalOptions="Center"
+                       TextColor="White"
+                       FontSize="Caption"
+                   Grid.Row="0"
+                       VerticalOptions="CenterAndExpand" 
+                       Style="{StaticResource ProfileTagLabel}"/>
+
+
+            <!-- button -->
+            <Button Text="Organizacion"
+                    BackgroundColor="DarkSlateBlue"
+                TextColor="White"
+                FontSize="Small"   
+                Style="{StaticResource FollowButton}"
+                Grid.Row="7"
+                Margin="20,0"/>
+
+
+
+            <Button  Text="Usuario"
+                BackgroundColor="DarkSlateBlue"
+                TextColor="White"
+                FontSize="Small"   
+                Style="{StaticResource FollowButton}"
+                Grid.Row="6"
+                Margin="10,0"/>
+
+
+        </Grid>
+    </ScrollView>
+</ContentPage>
