@@ -1,24 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\SVN\\Proyecto Hugo\\trunk\\AppDistanciamientoSocial\\AppDistanciamientoSocial\\AppDistanciamientoSocial.csproj": {}
+    "C:\\svn\\Proyecto_Hugo\\trunk\\AppDistanciamientoSocial\\AppDistanciamientoSocial\\AppDistanciamientoSocial.csproj": {}
   },
   "projects": {
-    "C:\\SVN\\Proyecto Hugo\\trunk\\AppDistanciamientoSocial\\AppDistanciamientoSocial\\AppDistanciamientoSocial.csproj": {
+    "C:\\svn\\Proyecto_Hugo\\trunk\\AppDistanciamientoSocial\\AppDistanciamientoSocial\\AppDistanciamientoSocial.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\SVN\\Proyecto Hugo\\trunk\\AppDistanciamientoSocial\\AppDistanciamientoSocial\\AppDistanciamientoSocial.csproj",
+        "projectUniqueName": "C:\\svn\\Proyecto_Hugo\\trunk\\AppDistanciamientoSocial\\AppDistanciamientoSocial\\AppDistanciamientoSocial.csproj",
         "projectName": "AppDistanciamientoSocial",
-        "projectPath": "C:\\SVN\\Proyecto Hugo\\trunk\\AppDistanciamientoSocial\\AppDistanciamientoSocial\\AppDistanciamientoSocial.csproj",
-        "packagesPath": "C:\\Users\\israe\\.nuget\\packages\\",
-        "outputPath": "C:\\SVN\\Proyecto Hugo\\trunk\\AppDistanciamientoSocial\\AppDistanciamientoSocial\\obj\\",
+        "projectPath": "C:\\svn\\Proyecto_Hugo\\trunk\\AppDistanciamientoSocial\\AppDistanciamientoSocial\\AppDistanciamientoSocial.csproj",
+        "packagesPath": "C:\\Users\\raque\\.nuget\\packages\\",
+        "outputPath": "C:\\svn\\Proyecto_Hugo\\trunk\\AppDistanciamientoSocial\\AppDistanciamientoSocial\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\israe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\raque\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -59,10 +58,16 @@
             }
           },
           "imports": [
-            "net461"
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
         }
       }
     }
