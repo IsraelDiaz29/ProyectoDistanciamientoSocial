@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppDistanciamientoSocial.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -13,9 +14,19 @@ namespace AppDistanciamientoSocial
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
+        public MainPageViewModel  ViewModel { get; set; }
         public MainPage()
         {
             InitializeComponent();
+        }
+
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+            ViewModel = new MainPageViewModel();
+            this.BindingContext = ViewModel;
+            await ViewModel.LoadEmployees();
+;
         }
     }
 }
