@@ -24,7 +24,8 @@ namespace AppDistanciamientoSocial.ViewModel
             SearchCommand =
                 new Command(async (text) =>
                 {
-                    //string url = "";
+                    //Cadena interpolada.
+                    //string url = $"https://www.amiiboapi.com/api/?character={text}";
                     //var services =
                     // new HttpHelper<Employees>();
                     //var employees = await services.GetRestServiceDataAsync(url);
@@ -35,12 +36,12 @@ namespace AppDistanciamientoSocial.ViewModel
 
         public async Task LoadEmployees()
         {
-            var url = "https://www.amiiboapi.com/api/character";
-            var services =
-                new HttpHelper<Employees>();
+            //var url = "https://www.amiiboapi.com/api/character";
+            //var services =
+            //    new HttpHelper<Employees>();
 
-            var employees = await services.GetRestServiceDataAsync(url);
-            Employees = new ObservableCollection<Employee>(employees.employees);
+            //var employees = await services.GetRestServiceDataAsync(url);
+            //Employees = new ObservableCollection<Employee>(employees.employees);
         }
     }
 }

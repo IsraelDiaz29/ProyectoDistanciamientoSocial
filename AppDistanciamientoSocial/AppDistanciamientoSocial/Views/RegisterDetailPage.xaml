@@ -12,8 +12,8 @@
         <SearchBar x:Name="search"
                    Placeholder="Buscar Empleado ... " SearchCommand="{Binding SearchCommand}" 
                    SearchCommandParameter="{Binding Text,Source={x:Reference search}}"></SearchBar>
-        <ListView>
-
+        <ListView ItemsSource="{Binding Employees}">
+            
         </ListView>
     </StackLayout>
 </ContentPage>
