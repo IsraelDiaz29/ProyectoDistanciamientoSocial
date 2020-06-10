@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace AppDistanciamientoSocial.ViewModel
 {
-    public partial class ReportViewModel : BaseViewModel
+    public partial class ReportViewModel 
     {
         HttpClient client;
 

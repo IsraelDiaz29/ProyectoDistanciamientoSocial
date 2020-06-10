@@ -1,8 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:controls="clr-namespace:AppDistanciamientoSocial.Control"
        xmlns:views="clr-namespace:AppDistanciamientoSocial.Views"
-       FlyoutBackgroundImage="fondo.jpg"
+       FlyoutBackgroundImage="photo.jpg"
        FlyoutBackgroundImageAspect="AspectFill"
        FlyoutHeaderBehavior="CollapseOnScroll"
        Navigating="OnNavigating"
@@ -51,10 +52,10 @@
         </Style>
     </Shell.Resources>
 
-    <!--<Shell.FlyoutHeader>
+   
+    <Shell.FlyoutHeader>
         <controls:FlyoutHeader />
-    </Shell.FlyoutHeader>-->
-
+    </Shell.FlyoutHeader>
 
 
     <FlyoutItem
@@ -67,7 +68,7 @@
             <ShellContent 
                          Style="{StaticResource HomeShell}"
                           Icon="register.png"
-                          ContentTemplate="{DataTemplate  views:RegisterDetailPage }" />
+                          ContentTemplate="{DataTemplate  views:EmployeesDetailPage}"/>
 
         </Tab>
 
@@ -78,7 +79,7 @@
                          Style="{StaticResource ReportShell}"
                           Title="Graficas"
                           Icon="statistics.png"
-                          ContentTemplate="{DataTemplate views:ReportDetailsPage}" />
+                          ContentTemplate="{DataTemplate views:ReporteIndividualG}" />
             <ShellContent 
                       Style="{StaticResource ReportShell}"
                         Title="Graficas"
@@ -93,7 +94,7 @@
                           Style="{StaticResource EmployeesShell}"
                           Title="Employees"
                           Icon="work.png"
-                          ContentTemplate="{DataTemplate views:EmployeesDetailPage}" />
+                          ContentTemplate="{DataTemplate views:RegisterDetailPage}" />
            
         </Tab>
 

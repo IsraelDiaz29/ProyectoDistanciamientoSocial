@@ -24,9 +24,27 @@ namespace AppDistanciamientoSocial.Views
         {
             base.OnAppearing();
             ViewModel = new RegisterDetailPageViewModel();
-            this.BindingContext = ViewModel;
             await ViewModel.LoadEmployees();
-            ;
+            this.BindingContext = ViewModel;
         }
+
+        private async void Cell_OnAppearing(object sender, EventArgs e)
+        {
+            var cell = sender as ViewCell;
+            var view = cell.View;
+
+
+            view.TranslationX = -100;
+            view.Opacity = 0;
+
+            await Task.WhenAny<bool>
+                (
+                    view.TranslateTo(0, 0, 250, Easing.SinIn),
+                    view.FadeTo(1, 500, Easing.BounceIn)
+                );
+
+        }
+
+        
     }
 }

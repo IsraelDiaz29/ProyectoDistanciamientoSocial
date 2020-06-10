@@ -1,15 +1,25 @@
 {
   "version": 2,
-  "dgSpecHash": "gWEwZ5KqTao+Qd6LNfqxL3eWZZxmfpTkTRW69tCHyfFTwnLK3+bMiAV/ZYKBsxVwGpVl1djSbvJ2BlsRyS3hDw==",
+  "dgSpecHash": "9joMmVS/xfSY3Rm1Povsnot3MONTSfKaSglrj1h4PAmwsZztdgcxWwaiJIWhHlCH09SyPLpAbXkiMaH7yc3SHQ==",
   "success": true,
   "projectFilePath": "C:\\svn\\Proyecto_Hugo\\trunk\\AppDistanciamientoSocial\\AppDistanciamientoSocial\\AppDistanciamientoSocial.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\raque\\.nuget\\packages\\hangfire.core\\1.7.11\\hangfire.core.1.7.11.nupkg.sha512",
+    "C:\\Users\\raque\\.nuget\\packages\\microcharts\\0.7.1\\microcharts.0.7.1.nupkg.sha512",
+    "C:\\Users\\raque\\.nuget\\packages\\microcharts.forms\\0.7.1\\microcharts.forms.0.7.1.nupkg.sha512",
     "C:\\Users\\raque\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\raque\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
     "C:\\Users\\raque\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\raque\\.nuget\\packages\\skiasharp\\1.59.1\\skiasharp.1.59.1.nupkg.sha512",
+    "C:\\Users\\raque\\.nuget\\packages\\skiasharp.views.forms\\1.59.1.1\\skiasharp.views.forms.1.59.1.1.nupkg.sha512",
+    "C:\\Users\\raque\\.nuget\\packages\\syncfusion.licensing\\18.1.0.56\\syncfusion.licensing.18.1.0.56.nupkg.sha512",
+    "C:\\Users\\raque\\.nuget\\packages\\syncfusion.xamarin.core\\18.1.0.56\\syncfusion.xamarin.core.18.1.0.56.nupkg.sha512",
+    "C:\\Users\\raque\\.nuget\\packages\\syncfusion.xamarin.sfautocomplete\\18.1.0.56\\syncfusion.xamarin.sfautocomplete.18.1.0.56.nupkg.sha512",
     "C:\\Users\\raque\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\raque\\.nuget\\packages\\system.valuetuple\\4.4.0\\system.valuetuple.4.4.0.nupkg.sha512",
     "C:\\Users\\raque\\.nuget\\packages\\xamarin.essentials\\1.1.0\\xamarin.essentials.1.1.0.nupkg.sha512",
-    "C:\\Users\\raque\\.nuget\\packages\\xamarin.forms\\4.6.0.847\\xamarin.forms.4.6.0.847.nupkg.sha512"
+    "C:\\Users\\raque\\.nuget\\packages\\xamarin.forms\\4.6.0.847\\xamarin.forms.4.6.0.847.nupkg.sha512",
+    "C:\\Users\\raque\\.nuget\\packages\\xamarin.forms.behaviorspack\\2.1.1\\xamarin.forms.behaviorspack.2.1.1.nupkg.sha512"
   ],
   "logs": []
 }

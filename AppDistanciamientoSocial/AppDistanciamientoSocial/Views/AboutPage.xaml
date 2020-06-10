@@ -9,7 +9,7 @@
     
     <ContentPage.Resources>
         <Color x:Key="Primary">#96d1ff</Color>
-        <Color x:Key="LightTextColor">#999999</Color>
+        <Color x:Key="LightTextColor">#</Color>
     </ContentPage.Resources>
 
     <ScrollView>

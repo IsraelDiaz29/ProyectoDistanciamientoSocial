@@ -4,15 +4,132 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:controls="clr-namespace:AppDistanciamientoSocial.Control"
-             xmlns:data="clr-namespace:AppDistanciamientoSocial.Data"
+             
              xmlns:views="clr-namespace:AppDistanciamientoSocial.Views"
+             xmlns:autocomplete="clr-namespace:Syncfusion.SfAutoComplete.XForms;assembly=Syncfusion.SfAutoComplete.XForms" xmlns:behaviorsPack="clr-namespace:Xamarin.Forms.BehaviorsPack;assembly=Xamarin.Forms.BehaviorsPack"
              x:Class="AppDistanciamientoSocial.Views.RegisterDetailPage"
             Title="Registros">
     <StackLayout>
-        <SearchBar x:Name="search"
+        <autocomplete:SfAutoComplete HeightRequest="40"
+                                     DataSource="{Binding Employees}"
+                                     DisplayMemberPath="strNombre"
+                                     Watermark="Busca tu empleado ..."
+                                    >
+            <autocomplete:SfAutoComplete.Behaviors>
+                <behaviorsPack:EventToCommandBehavior EventName="SelectionChanged"
+                                                      Command="{Binding SearchCommand}"
+                                                      EventArgsPropertyPath="Value">
+                    
+                </behaviorsPack:EventToCommandBehavior>
+                
+            </autocomplete:SfAutoComplete.Behaviors>
+            
+        </autocomplete:SfAutoComplete>
+        <!--<SearchBar x:Name="search"
                    Placeholder="Buscar Empleado ... " SearchCommand="{Binding SearchCommand}" 
-                   SearchCommandParameter="{Binding Text,Source={x:Reference search}}"></SearchBar>
-        <ListView ItemsSource="{Binding Employees}">
+                   SearchCommandParameter="{Binding Text,Source={x:Reference search}}"></SearchBar>-->
+        <ListView ItemsSource="{Binding Employees}"
+                  RowHeight="80">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Frame CornerRadius="2"
+                               Margin="5"
+                               BackgroundColor="White">
+                            <StackLayout>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Label
+                                Text="{Binding strNombre} "
+                                HorizontalOptions="CenterAndExpand"
+                                VerticalOptions="CenterAndExpand"
+                                FontSize="13"
+                                TextColor="Black"
+                                ></Label>
+                                    <Label
+                                Text="{Binding strAPaterno} "
+                                HorizontalOptions="CenterAndExpand"
+                                VerticalOptions="CenterAndExpand"
+                                FontSize="13"
+                                TextColor="Black"
+                                        Grid.Column="1" 
+                                ></Label>
+                                    <ImageButton Source="edit.png"
+                                        
+                                        BackgroundColor="Transparent"
+                                        WidthRequest="20"
+                                        HeightRequest="20"
+                                        Aspect="AspectFit"
+                                         HorizontalOptions="CenterAndExpand"
+                                         VerticalOptions="CenterAndExpand"
+                                        FlexLayout.AlignSelf="Center"
+                                        FlexLayout.Grow="1"
+                                        Grid.Column="3" 
+                                         >
+                                        <VisualStateManager.VisualStateGroups>
+                                            <VisualStateGroup x:Name="CommonStates">
+                                                <VisualState x:Name="Normal">
+                                                    <VisualState.Setters>
+                                                        <Setter Property="Scale"
+                            Value="1" />
+                                                    </VisualState.Setters>
+                                                </VisualState>
+
+                                                <VisualState x:Name="Pressed">
+                                                    <VisualState.Setters>
+                                                        <Setter Property="Scale"
+                            Value="0.8" />
+                                                    </VisualState.Setters>
+                                                </VisualState>
+
+                                            </VisualStateGroup>
+                                        </VisualStateManager.VisualStateGroups>
+                                    </ImageButton>
+                                    <ImageButton Source="trash.png"
+                                        BackgroundColor="Transparent"
+                                        WidthRequest="20"
+                                        HeightRequest="20"
+                                        Aspect="AspectFit"
+                                         HorizontalOptions="CenterAndExpand"
+                                         VerticalOptions="CenterAndExpand"
+                                        FlexLayout.AlignSelf="Center"
+                                        FlexLayout.Grow="1"
+                                        Grid.Column="4" 
+                                         >
+                                        <VisualStateManager.VisualStateGroups>
+                                            <VisualStateGroup x:Name="CommonStates">
+                                                <VisualState x:Name="Normal">
+                                                    <VisualState.Setters>
+                                                        <Setter Property="Scale"
+                            Value="1" />
+                                                    </VisualState.Setters>
+                                                </VisualState>
+
+                                                <VisualState x:Name="Pressed">
+                                                    <VisualState.Setters>
+                                                        <Setter Property="Scale"
+                            Value="0.8" />
+                                                        
+                                                    </VisualState.Setters>
+                                                </VisualState>
+
+                                            </VisualStateGroup>
+                                        </VisualStateManager.VisualStateGroups>
+                                    </ImageButton>
+
+                                </Grid>
+                            </StackLayout>
+                            
+                        </Frame>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
             
         </ListView>
     </StackLayout>
