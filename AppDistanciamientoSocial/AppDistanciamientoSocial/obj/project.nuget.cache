@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "N2BqyHSI37rAmwfAx5nN+P5Q1x0VWkV5K25MYZH3/DHLYGOf4pyix1vP/9q43ifKObI7eKaR0IHuu1P6VWhrQA==",
+  "dgSpecHash": "gWEwZ5KqTao+Qd6LNfqxL3eWZZxmfpTkTRW69tCHyfFTwnLK3+bMiAV/ZYKBsxVwGpVl1djSbvJ2BlsRyS3hDw==",
   "success": true,
   "projectFilePath": "C:\\svn\\Proyecto_Hugo\\trunk\\AppDistanciamientoSocial\\AppDistanciamientoSocial\\AppDistanciamientoSocial.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\raque\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\raque\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\raque\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\raque\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\raque\\.nuget\\packages\\xamarin.essentials\\1.1.0\\xamarin.essentials.1.1.0.nupkg.sha512",
     "C:\\Users\\raque\\.nuget\\packages\\xamarin.forms\\4.6.0.847\\xamarin.forms.4.6.0.847.nupkg.sha512"

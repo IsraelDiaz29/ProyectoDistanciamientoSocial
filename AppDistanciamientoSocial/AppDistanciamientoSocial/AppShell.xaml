@@ -1,9 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-       xmlns:controls="clr-namespace:AppDistanciamientoSocial.Control"
        xmlns:views="clr-namespace:AppDistanciamientoSocial.Views"
-       FlyoutBackgroundImage="photo.jpg"
+       FlyoutBackgroundImage="fondo.jpg"
        FlyoutBackgroundImageAspect="AspectFill"
        FlyoutHeaderBehavior="CollapseOnScroll"
        Navigating="OnNavigating"
@@ -52,9 +51,9 @@
         </Style>
     </Shell.Resources>
 
-    <Shell.FlyoutHeader>
+    <!--<Shell.FlyoutHeader>
         <controls:FlyoutHeader />
-    </Shell.FlyoutHeader>
+    </Shell.FlyoutHeader>-->
 
 
 
@@ -62,13 +61,13 @@
                 Title="Distanciamiento Social"
                 FlyoutDisplayOptions="AsMultipleItems">
 
-        <Tab Title="Control Empleados"
+        <Tab Title="Control"
              Route="home"
              Icon="register.png">
             <ShellContent 
                          Style="{StaticResource HomeShell}"
                           Icon="register.png"
-                          ContentTemplate="{DataTemplate views:RegisterDetailPage}" />
+                          ContentTemplate="{DataTemplate  views:RegisterDetailPage }" />
 
         </Tab>
 
@@ -89,7 +88,7 @@
 
         <Tab Title="Empleados"
              Route="employees"
-             Icon="aa.png">
+             Icon="work.png">
             <ShellContent 
                           Style="{StaticResource EmployeesShell}"
                           Title="Employees"
