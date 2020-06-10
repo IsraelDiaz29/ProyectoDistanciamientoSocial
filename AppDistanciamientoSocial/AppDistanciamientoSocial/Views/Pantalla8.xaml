@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AppDistanciamientoSocial.Views.Pantalla8">
+
+         <StackLayout BackgroundColor="WhiteSmoke" >
+        <Label Text="Comunica a tus usuarios el siguiente indentificador" HorizontalOptions="Center"
+                 VerticalOptions="CenterAndExpand" HorizontalTextAlignment="Center" FontSize="45" TextColor="Black" />
+        <Label Text="1EDS-1" TextColor="Black" WidthRequest="350"
+                 HeightRequest="75" BackgroundColor="White"
+                 HorizontalOptions="Center" HorizontalTextAlignment="Center" FontSize="40"
+                 VerticalOptions="CenterAndExpand" />
+
+        <Button Text="Siguiente" x:Name="Siguiente" TextColor="White" Clicked="Siguiente_Clicked"
+                VerticalOptions="CenterAndExpand" WidthRequest="350" BorderWidth="15"
+                HeightRequest="75" HorizontalOptions="CenterAndExpand" FontSize="Title" 
+                BackgroundColor="DodgerBlue" BorderRadius="30"/>
+         </StackLayout>
+            
+</ContentPage>
