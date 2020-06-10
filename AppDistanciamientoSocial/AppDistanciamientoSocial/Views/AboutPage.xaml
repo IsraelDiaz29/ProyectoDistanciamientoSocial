@@ -26,7 +26,7 @@
                              VerticalOptions="Center">
                     <ContentView Padding="0,40,0,40" 
                                  VerticalOptions="FillAndExpand">
-                        <Image Source="xamarin_logo.png" 
+                        <Image Source="about.png" 
                                VerticalOptions="Center" 
                                HeightRequest="64" />
                     </ContentView>
