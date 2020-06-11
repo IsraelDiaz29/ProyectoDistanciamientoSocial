@@ -69,9 +69,11 @@
             Text="Organizacion"
             TextColor="White"
             VerticalOptions="End"
+            Command="{Binding NextPageCommand2}"
             />
 
         <controls1:GradientButton
+            x:Name="btn2"
             Margin="10"
             BorderRadius="20"
             EndColor="#5a41b9"
@@ -80,6 +82,7 @@
             Text="Usuario"
             TextColor="White"
             VerticalOptions="End"
+            Command="{Binding NextPageCommand}"
             />
 
 

@@ -82,7 +82,11 @@
             Text="Iniciar"
             TextColor="White"
             VerticalOptions="End"
+            Command="{Binding NextPageCommand}"
+            
             />
+      
+
         <Label
             FontAttributes="Bold"
             FontSize="16"

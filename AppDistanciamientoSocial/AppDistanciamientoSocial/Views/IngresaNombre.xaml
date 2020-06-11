@@ -62,9 +62,12 @@
          HorizontalOptions="Center"
          />
 
-        <Entry Placeholder="No°"
-         HorizontalTextAlignment="Center"/>
-
+        <Entry x:Name="txtName" 
+               Placeholder="Nombre Usuario"
+         HorizontalTextAlignment="Center"
+            CharacterSpacing="10"  
+               Keyboard="Text"/>
+        
         <controls:GradientButton
             Margin="10"
             BorderRadius="20"
@@ -74,6 +77,7 @@
             Text="Siguiente"
             TextColor="White"
             VerticalOptions="End"
+            OnTouchesEnded="GradientButton_OnTouchesEnded"
             />
 
 

@@ -62,8 +62,10 @@
          HorizontalOptions="Center"
          />
 
-        <Entry Placeholder="No°"
-         HorizontalTextAlignment="Center"/>
+        <Entry x:Name="txtNumber" 
+            Placeholder="No°"
+         HorizontalTextAlignment="Center"
+               Keyboard="Numeric"/>
 
         <controls:GradientButton
             Margin="10"
@@ -74,6 +76,7 @@
             Text="Siguiente"
             TextColor="White"
             VerticalOptions="End"
+            OnTouchesEnded="GradientButton_OnTouchesEnded"
             />
 
 

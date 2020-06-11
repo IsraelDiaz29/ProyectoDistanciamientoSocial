@@ -62,16 +62,18 @@
          />
 
         <Entry 
-            Text="1EDS-1" 
+            x:Name="txtNumber"
+           Placeholder="1001" 
             TextColor="Black" 
             WidthRequest="350"
             HeightRequest="75" 
             BackgroundColor="White" 
-            x:Name="txtIdUs"
             HorizontalOptions="Center" 
             HorizontalTextAlignment="Center"
             FontSize="40"
-            VerticalOptions="Center"/>
+            Keyboard="Numeric"
+            VerticalOptions="Center"
+            />
 
         <controls:GradientButton
             Margin="10"
@@ -82,6 +84,7 @@
             Text="Siguiente"
             TextColor="White"
             VerticalOptions="End"
+            OnTouchesEnded="GradientButton_OnTouchesEnded"
             />
 
 
