@@ -12,8 +12,9 @@ namespace AppDistanciamientoSocial
             InitializeComponent();
 
             MainPage = new Bienvenida();
+            
         }
-
+      
         protected override void OnStart()
         {
             // Handle when your app starts
