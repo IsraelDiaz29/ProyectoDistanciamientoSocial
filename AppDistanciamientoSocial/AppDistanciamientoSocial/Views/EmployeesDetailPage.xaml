@@ -5,6 +5,9 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              x:Class="AppDistanciamientoSocial.Views.EmployeesDetailPage"
              Title="Registros">
+ 
+    
+    
     <StackLayout>
 
         <Grid BackgroundColor="AliceBlue" HeightRequest="40">
