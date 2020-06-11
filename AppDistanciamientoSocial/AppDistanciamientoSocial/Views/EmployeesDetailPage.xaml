@@ -6,8 +6,8 @@
              x:Class="AppDistanciamientoSocial.Views.EmployeesDetailPage"
              Title="Registros">
     <StackLayout>
-        
-            <Grid BackgroundColor="AliceBlue" >
+
+        <Grid BackgroundColor="AliceBlue" HeightRequest="40">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition></ColumnDefinition>
                                         <ColumnDefinition></ColumnDefinition>

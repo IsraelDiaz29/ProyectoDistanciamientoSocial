@@ -20,25 +20,49 @@
                                                       EventArgsPropertyPath="Value">
                     
                 </behaviorsPack:EventToCommandBehavior>
-                <behaviorsPack:EventToCommandBehavior EventName="Clicked"
-                                                      Command="{Binding DeleteCommand}"
-                                                      EventArgsPropertyPath="Value">
-
-                </behaviorsPack:EventToCommandBehavior>
+               
             </autocomplete:SfAutoComplete.Behaviors>
             
         </autocomplete:SfAutoComplete>
-        <!--<SearchBar x:Name="search"
-                   Placeholder="Buscar Empleado ... " SearchCommand="{Binding SearchCommand}" 
-                   SearchCommandParameter="{Binding Text,Source={x:Reference search}}"></SearchBar>-->
+
+        <Grid BackgroundColor="AliceBlue"
+              HeightRequest="40">
+            <Grid.ColumnDefinitions >
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label
+                                Text=" Usuario"
+                                HorizontalOptions="CenterAndExpand"
+                                VerticalOptions="CenterAndExpand"
+                                FontSize="12"
+                                FontAttributes="Bold"
+                                TextColor="Black"
+                 Grid.ColumnSpan="3"
+                                ></Label>
+            <Label
+                                Text=" Acciones"
+                                HorizontalOptions="CenterAndExpand"
+                                VerticalOptions="CenterAndExpand"
+                                FontSize="12"
+                                FontAttributes="Bold"
+                                TextColor="Black"
+                                        Grid.Column="3" 
+                Grid.ColumnSpan="2"
+                                ></Label>
+
+            
+        </Grid>
+
         <ListView ItemsSource="{Binding Employees}"
                   RowHeight="80">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Frame CornerRadius="2"
-                               Margin="5"
-                               BackgroundColor="White">
+                        <Frame BackgroundColor="White">
                             <StackLayout>
                                 <Grid>
                                     <Grid.ColumnDefinitions>
@@ -64,7 +88,7 @@
                                         Grid.Column="1" 
                                 ></Label>
                                     <ImageButton Source="edit.png"
-                                        
+                                       
                                         BackgroundColor="Transparent"
                                         WidthRequest="20"
                                         HeightRequest="20"
@@ -88,6 +112,7 @@
                                                     <VisualState.Setters>
                                                         <Setter Property="Scale"
                             Value="0.8" />
+                                                       
                                                     </VisualState.Setters>
                                                 </VisualState>
 
@@ -95,6 +120,9 @@
                                         </VisualStateManager.VisualStateGroups>
                                     </ImageButton>
                                     <ImageButton Source="trash.png"
+                                                  Command="{Binding DeleterCommand}"
+                                       CommandParameter="{Binding idEmployee}"
+                                                 Clicked="ImageButton_Clicked"
                                         BackgroundColor="Transparent"
                                         WidthRequest="20"
                                         HeightRequest="20"

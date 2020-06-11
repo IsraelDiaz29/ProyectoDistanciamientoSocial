@@ -45,6 +45,11 @@ namespace AppDistanciamientoSocial.Views
 
         }
 
-        
+        private async Task ImageButton_ClickedAsync(object sender, EventArgs e)
+        {
+            ViewModel = new RegisterDetailPageViewModel();
+            await ViewModel.Deleter();
+            this.BindingContext = ViewModel;
+        }
     }
 }
