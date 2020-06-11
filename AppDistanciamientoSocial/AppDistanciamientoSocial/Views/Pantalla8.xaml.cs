@@ -1,4 +1,5 @@
-﻿using AppDistanciamientoSocial.ViewModel;
+﻿using Android.App;
+using AppDistanciamientoSocial.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,5 +27,7 @@ namespace AppDistanciamientoSocial.Views
             ViewModel.Confirmar(Int32.Parse(txtNumber.Text));
             
         }
+
+       
     }
 }

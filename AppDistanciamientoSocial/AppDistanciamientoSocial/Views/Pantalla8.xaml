@@ -86,7 +86,7 @@
             VerticalOptions="End"
             OnTouchesEnded="GradientButton_OnTouchesEnded"
             />
-
+       
 
     </StackLayout>
 </ContentPage>
