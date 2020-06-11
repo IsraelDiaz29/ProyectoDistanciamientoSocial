@@ -10,7 +10,7 @@
         <Label Text="Comunica a tus usuarios el siguiente indentificador" HorizontalOptions="Center"
                  VerticalOptions="CenterAndExpand" HorizontalTextAlignment="Center" FontSize="45" TextColor="Black" />
         <Entry Text="1EDS-1" TextColor="Black" WidthRequest="350"
-                 HeightRequest="75" BackgroundColor="White"
+                 HeightRequest="75" BackgroundColor="White" x:Name="txtIdUs"
                  HorizontalOptions="Center" HorizontalTextAlignment="Center" FontSize="40"
                  VerticalOptions="CenterAndExpand" />
 
