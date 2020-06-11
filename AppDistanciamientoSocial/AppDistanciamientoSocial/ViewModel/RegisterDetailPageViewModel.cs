@@ -33,11 +33,9 @@ namespace AppDistanciamientoSocial.ViewModel
         }
 
         public ICommand SearchCommand { get; set; }
-        public ICommand DeleterCommand { get; }
+        public Command DeleterCommand { get; set; }
         private INavigation Navigation;
         private Employee _currentEmployee;
-
-        
 
         public Command ItemTappedCommand { get; set; }
 
@@ -60,7 +58,7 @@ namespace AppDistanciamientoSocial.ViewModel
                     var empleados = param as Employee;
                     if (empleados != null)
                     {
-                        string url = $"https://webapidistanciamientosocial20200610040741.azurewebsites.net/api/empleado?id={empleados.idEmployee}";
+                        string url = $"https://webapidistanciamientosocial20200610040741.azurewebsites.net/api/empleado?id={empleados.idEmpleado}";
                         var client = new HttpClient();
                         client.BaseAddress = new Uri(url);
                         var response =
@@ -75,7 +73,8 @@ namespace AppDistanciamientoSocial.ViewModel
 
 
             DeleterCommand =
-                new Command(async (param) => {
+                new Command(async (param) =>
+                {
 
 
                     if (param != null)
@@ -111,22 +110,7 @@ namespace AppDistanciamientoSocial.ViewModel
 
         }
 
-        public async Task Deleter(int param)
-        {
-            var url = "https://webapidistanciamientosocial20200610040741.azurewebsites.net/api/empleado?id=param";
-
-            var client = new HttpClient();
-            client.BaseAddress = new Uri(url);
-            var response =
-                await client.DeleteAsync(client.BaseAddress);
-            response.EnsureSuccessStatusCode();
-            var jsonResult =
-                await response.Content.ReadAsStringAsync();
-            Employees = JsonConvert.DeserializeObject<ObservableCollection<Employee>>(jsonResult);
-
-
-
-        }
+      
         public async Task NavigateToEditView()
         {
             await Navigation.PushAsync(new PersonalDetail(CurrentEmployee));
