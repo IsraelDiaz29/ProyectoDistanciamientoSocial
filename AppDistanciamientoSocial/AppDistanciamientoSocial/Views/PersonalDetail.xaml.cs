@@ -1,4 +1,5 @@
 ﻿using AppDistanciamientoSocial.Model;
+using AppDistanciamientoSocial.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,14 +16,11 @@ namespace AppDistanciamientoSocial.Views
     {
         private Employee currentEmployee;
 
-        public PersonalDetail()
-        {
-            InitializeComponent();
-        }
-
         public PersonalDetail(Employee currentEmployee)
         {
+            InitializeComponent();
             this.currentEmployee = currentEmployee;
+            BindingContext = new PersonDetailViewModel(Navigation, currentEmployee);
         }
     }
 }

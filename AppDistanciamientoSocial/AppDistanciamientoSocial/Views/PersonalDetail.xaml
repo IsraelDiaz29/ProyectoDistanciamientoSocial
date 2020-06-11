@@ -3,13 +3,112 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d"
+             Title="Employee"
              x:Class="AppDistanciamientoSocial.Views.PersonalDetail">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Padding="40,40,40,40">
+            <Label Text="Nombre Empleado:"
+                   TextColor="Black"
+                   FontAttributes="Italic"
+                   HorizontalOptions="Center"
+                   FontSize="15"></Label>
+            <Entry x:Name="txtName"
+                    Placeholder="Héctor"
+                   Text="{Binding NewFriend.strNombre}"
+                   Keyboard="Text"
+                   TextColor="Black"
+                   PlaceholderColor="LightGray"
+                   FontAttributes="Italic"></Entry>
+            <Label Text="Apellido Paterno:"
+                   TextColor="Black"
+                   FontAttributes="Italic"
+                   HorizontalOptions="Center"
+                   FontSize="15"></Label>
+            <Entry Placeholder="Sanchez"
+                   Text="{Binding NewFriend.strAPaterno}"
+                   Keyboard="Text"
+                   TextColor="Black"
+                   PlaceholderColor="LightGray"
+                   FontAttributes="Italic"></Entry>
+            <Label Text="Apellido Materno:"
+                   TextColor="Black"
+                   FontAttributes="Italic"
+                   HorizontalOptions="Center"
+                   FontSize="15"></Label>
+            <Entry Placeholder="Monroy"
+                   Text="{Binding NewFriend.strAMaterno}"
+                   TextColor="Black"
+                   PlaceholderColor="LightGray"
+                   FontAttributes="Italic"></Entry>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+
+                </Grid.ColumnDefinitions>
+                <ImageButton Source="save.png"
+                    Command="{Binding SaveFriendCommand}"
+                           BackgroundColor="Transparent"
+                                        WidthRequest="25"
+                                        HeightRequest="25"
+                                        Aspect="AspectFit"
+                                         HorizontalOptions="CenterAndExpand"
+                                         VerticalOptions="CenterAndExpand"
+                                        FlexLayout.AlignSelf="Center"
+                                        FlexLayout.Grow="1"
+                                        Grid.Column="0" >
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale"
+                            Value="1" />
+                                </VisualState.Setters>
+                            </VisualState>
+
+                            <VisualState x:Name="Pressed">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale"
+                            Value="0.8" />
+                                </VisualState.Setters>
+                            </VisualState>
+
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                </ImageButton>
+                <ImageButton                 x:Name="btnEliminar"
+                                        Source="trash.png"
+                                        Command="{Binding DeleterFriendCommand}"
+                                        BackgroundColor="Transparent"
+                                        WidthRequest="25"
+                                        HeightRequest="25"
+                                        Aspect="AspectFit"
+                                         HorizontalOptions="CenterAndExpand"
+                                         VerticalOptions="CenterAndExpand"
+                                        FlexLayout.AlignSelf="Center"
+                                        FlexLayout.Grow="1"
+                                        Grid.Column="1" 
+                                         >
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale"
+                            Value="1" />
+                                </VisualState.Setters>
+                            </VisualState>
+
+                            <VisualState x:Name="Pressed">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale"
+                            Value="0.8" />
+                                </VisualState.Setters>
+                            </VisualState>
+
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                </ImageButton>
+            </Grid>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
