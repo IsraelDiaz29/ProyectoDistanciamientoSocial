@@ -9,7 +9,7 @@
          <StackLayout BackgroundColor="WhiteSmoke" >
         <Label Text="Comunica a tus usuarios el siguiente indentificador" HorizontalOptions="Center"
                  VerticalOptions="CenterAndExpand" HorizontalTextAlignment="Center" FontSize="45" TextColor="Black" />
-        <Label Text="1EDS-1" TextColor="Black" WidthRequest="350"
+        <Entry Text="1EDS-1" TextColor="Black" WidthRequest="350"
                  HeightRequest="75" BackgroundColor="White"
                  HorizontalOptions="Center" HorizontalTextAlignment="Center" FontSize="40"
                  VerticalOptions="CenterAndExpand" />
