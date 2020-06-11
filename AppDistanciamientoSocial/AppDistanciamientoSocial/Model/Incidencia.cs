@@ -12,5 +12,9 @@ namespace AppDistanciamientoSocial.Model
         public int idEmpleadoInvadido { get; set; }
         public int idEmpleadoInvasor { get; set; }
         public String strTiempo { get; set; }
+        
+        public String EmpleadoInvadido { get; set; }
+
+        public String EmpleadoInvasor { get; set; }
     }
 }

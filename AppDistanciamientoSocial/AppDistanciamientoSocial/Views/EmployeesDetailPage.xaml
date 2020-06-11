@@ -3,13 +3,113 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d"
-             x:Class="AppDistanciamientoSocial.Views.EmployeesDetailPage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+             x:Class="AppDistanciamientoSocial.Views.EmployeesDetailPage"
+             Title="Registros">
+    <StackLayout>
+        
+            <Grid BackgroundColor="AliceBlue" >
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Label
+                                Text=" Invadido"
+                                HorizontalOptions="CenterAndExpand"
+                                VerticalOptions="CenterAndExpand"
+                                FontSize="13"
+                                FontAttributes="Bold"
+                                TextColor="Black"
+                                ></Label>
+                                    <Label
+                                Text=" Invasor"
+                                HorizontalOptions="CenterAndExpand"
+                                VerticalOptions="CenterAndExpand"
+                                FontSize="13"
+                                FontAttributes="Bold"
+                                TextColor="Black"
+                                        Grid.Column="1" 
+                                ></Label>
+
+                                    <Label
+                                Text="Tiempo"
+                                HorizontalOptions="CenterAndExpand"
+                                VerticalOptions="CenterAndExpand"
+                                 FontSize="13"
+                                FontAttributes="Bold"
+                                TextColor="Black"
+                                        Grid.Column="2" 
+                                ></Label>
+                                    <Label
+                                Text="Fecha"
+                                HorizontalOptions="CenterAndExpand"
+                                VerticalOptions="CenterAndExpand"
+                                 FontSize="13"
+                                FontAttributes="Bold"
+                                TextColor="Black"
+                                        Grid.Column="3" 
+                                ></Label>
+                                </Grid>
+                            
+        <ListView ItemsSource="{Binding Incidencias}"
+                  RowHeight="80">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Frame 
+                               BackgroundColor="White">
+                            <StackLayout>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Label
+                                Text="{Binding EmpleadoInvadido} "
+                                HorizontalOptions="CenterAndExpand"
+                                VerticalOptions="CenterAndExpand"
+                                FontSize="13"
+                                TextColor="Black"
+                                ></Label>
+                                    <Label
+                                Text="{Binding EmpleadoInvasor} "
+                                HorizontalOptions="CenterAndExpand"
+                                VerticalOptions="CenterAndExpand"
+                                FontSize="12"
+                                TextColor="Black"
+                                        Grid.Column="1" 
+                                ></Label>
+
+                                    <Label
+                                Text="{Binding strTiempo} "
+                                HorizontalOptions="CenterAndExpand"
+                                VerticalOptions="CenterAndExpand"
+                                FontSize="10"
+                                FontAttributes="Italic"
+                                TextColor="Black"
+                                        Grid.Column="2" 
+                                ></Label>
+                                    <Label
+                                Text="{Binding strFecha} "
+                                HorizontalOptions="CenterAndExpand"
+                                VerticalOptions="CenterAndExpand"
+                                       FontAttributes="Italic"
+                                FontSize="10"
+                                TextColor="Black"
+                                        Grid.Column="3" 
+                                ></Label>
+                                </Grid>
+                            </StackLayout>
+
+                        </Frame>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+    </StackLayout>
+
 </ContentPage>
