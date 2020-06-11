@@ -79,12 +79,12 @@
                          Style="{StaticResource ReportShell}"
                           Title="Graficas"
                           Icon="statistics.png"
-                          ContentTemplate="{DataTemplate views:ReporteIndividualG}" />
+                          ContentTemplate="{DataTemplate views:ReporteGrupal}" />
             <ShellContent 
                       Style="{StaticResource ReportShell}"
                         Title="Graficas"
                         Icon="statistics.png"
-                      ContentTemplate="{DataTemplate views:ReportDetailsPage}" />
+                      ContentTemplate="{DataTemplate views:ReporteIndividual}" />
         </Tab>
 
         <Tab Title="Empleados"
