@@ -8,8 +8,8 @@
              Title="About">
     
     <ContentPage.Resources>
-        <Color x:Key="Primary">#96d1ff</Color>
-        <Color x:Key="LightTextColor">#</Color>
+        <Color x:Key="Primary">#253774</Color>
+        <Color x:Key="LightTextColor">#a8a8a8</Color>
     </ContentPage.Resources>
 
     <ScrollView>
@@ -54,8 +54,8 @@
                         <Label.FormattedText>
                             <FormattedString>
                                 <FormattedString.Spans>
-                                    <Span Text="Esta aplicación tiene un conjunto de ejercicios en XAML y C# hechos con " />
-                                    <Span Text="Xamarin Platform" 
+                                    <Span Text="Esta aplicación tiene como objetivo permitir a las empresas cocientizar el " />
+                                    <Span Text="Distanciamiento social" 
                                           FontAttributes="Bold" 
                                           TextColor="Blue" 
                                           TextDecorations="Underline">
