@@ -33,7 +33,7 @@ namespace AppDistanciamientoSocial.ViewModel
         }
 
         public ICommand SearchCommand { get; set; }
-        public Command DeleterFriendCommand { get; set; }
+        public ICommand DeleterCommand { get; }
         private INavigation Navigation;
         private Employee _currentEmployee;
 
@@ -72,6 +72,23 @@ namespace AppDistanciamientoSocial.ViewModel
                     }
 
                 });
+
+
+            DeleterCommand =
+                new Command(async (param) => {
+
+
+                    if (param != null)
+                    {
+                        string url = $"https://webapidistanciamientosocial20200610040741.azurewebsites.net/api/empleado?id=param";
+                        var client = new HttpClient();
+                        client.BaseAddress = new Uri(url);
+                        var response =
+                            await client.DeleteAsync(client.BaseAddress);
+                        response.EnsureSuccessStatusCode();
+
+                    }
+                });
             ItemTappedCommand = new Command(async () => await NavigateToEditView());
 
         }
@@ -94,6 +111,22 @@ namespace AppDistanciamientoSocial.ViewModel
 
         }
 
+        public async Task Deleter(int param)
+        {
+            var url = "https://webapidistanciamientosocial20200610040741.azurewebsites.net/api/empleado?id=param";
+
+            var client = new HttpClient();
+            client.BaseAddress = new Uri(url);
+            var response =
+                await client.DeleteAsync(client.BaseAddress);
+            response.EnsureSuccessStatusCode();
+            var jsonResult =
+                await response.Content.ReadAsStringAsync();
+            Employees = JsonConvert.DeserializeObject<ObservableCollection<Employee>>(jsonResult);
+
+
+
+        }
         public async Task NavigateToEditView()
         {
             await Navigation.PushAsync(new PersonalDetail(CurrentEmployee));
