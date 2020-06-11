@@ -71,23 +71,6 @@ namespace AppDistanciamientoSocial.ViewModel
 
                 });
 
-
-            DeleterCommand =
-                new Command(async (param) =>
-                {
-
-
-                    if (param != null)
-                    {
-                        string url = $"https://webapidistanciamientosocial20200610040741.azurewebsites.net/api/empleado?id=param";
-                        var client = new HttpClient();
-                        client.BaseAddress = new Uri(url);
-                        var response =
-                            await client.DeleteAsync(client.BaseAddress);
-                        response.EnsureSuccessStatusCode();
-
-                    }
-                });
             ItemTappedCommand = new Command(async () => await NavigateToEditView());
 
         }
