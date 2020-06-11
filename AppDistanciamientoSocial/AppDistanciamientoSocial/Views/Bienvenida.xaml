@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:controls="clr-namespace:AppDistanciamientoSocial.Controls"
+             mc:Ignorable="d"
+             x:Class="AppDistanciamientoSocial.Views.Bienvenida"
+             BackgroundColor="White">
+
+    <StackLayout>
+        <ScrollView>
+            <Grid RowSpacing="0">
+
+                <Grid.RowDefinitions>
+
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Image Source="HeaderBackground.png"
+                 Aspect="AspectFill"/>
+                <Image Source="CurvedMask.png" 
+                 Aspect="Fill"
+                 VerticalOptions="End"/>
+
+
+                <StackLayout Grid.Row="1">
+                </StackLayout>
+
+                <BoxView BackgroundColor="White" Grid.Row="2"/>
+
+                <Image Source="persona.png"
+                 VerticalOptions="End"
+                 HorizontalOptions="Center"
+                 HeightRequest="100"
+                 WidthRequest="100"
+                 TranslationY="50"/>
+
+            </Grid>
+        </ScrollView>
+
+        <Label
+            FontAttributes="Bold"
+            FontSize="Large"
+            HorizontalTextAlignment="Center"
+            Text="Bienvenido a tu " />
+
+        <Label
+            FontSize="20"
+            HorizontalTextAlignment="Center"
+            FontAttributes="Italic"
+            Text="aplicacion de "
+            TextColor="DarkGray" />
+
+
+
+        <Label Text="  Distanciamiento  "  TextColor="DarkBlue" HorizontalOptions="CenterAndExpand" FontSize="30" FontFamily="{StaticResource Lob}" />
+
+        <Label
+            FontSize="20"
+            HorizontalTextAlignment="Center"
+            FontAttributes="Italic"
+            Text="Social"
+            TextColor="DarkBlue" />
+
+        <Image Source="pres.gif" IsAnimationPlaying = "True"
+         VerticalOptions="End"
+         HeightRequest="100"
+         WidthRequest="200"
+         TranslationY="10"  
+         HorizontalOptions="Center"
+         />
+
+        <controls:GradientButton
+            Margin="10"
+            BorderRadius="20"
+            EndColor="#5a41b9"
+            HorizontalOptions="FillAndExpand"
+            StartColor="#6C6FEC"
+            Text="Iniciar"
+            TextColor="White"
+            VerticalOptions="End"
+            />
+        <Label
+            FontAttributes="Bold"
+            FontSize="16"
+            HorizontalTextAlignment="Center"
+            Text="¿Donde comprar Dispositivos?"
+            TextColor="#5154CE" />
+
+
+    </StackLayout>
+
+</ContentPage>
