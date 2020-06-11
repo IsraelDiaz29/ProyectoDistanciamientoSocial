@@ -7,7 +7,7 @@ namespace AppDistanciamientoSocial.Model
 
     public class Employee
     {
-        public int idEmployee { get; set; }
+        public int idEmpleado { get; set; }
         public int idEmpresa { get; set; }
         public string strAPaterno { get; set; }
         public string strAMaterno { get; set; }
