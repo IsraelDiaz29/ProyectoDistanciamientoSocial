@@ -54,11 +54,19 @@
               "target": "Package",
               "version": "[0.7.1, )"
             },
+            "NControl": {
+              "target": "Package",
+              "version": "[0.9.1, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
+            },
+            "NGraphics": {
+              "target": "Package",
+              "version": "[0.6.0-beta2, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppDistanciamientoSocial.Views;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,7 +11,7 @@ namespace AppDistanciamientoSocial
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
+            MainPage = new Bienvenida();
         }
 
         protected override void OnStart()
