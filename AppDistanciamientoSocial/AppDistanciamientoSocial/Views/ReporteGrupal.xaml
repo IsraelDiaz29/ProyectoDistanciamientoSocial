@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:forms="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+             BackgroundColor="#FFFFFF"
+             x:Class="AppDistanciamientoSocial.Views.ReporteGrupal"
+             Title="Reporte Grupal">
+    <ScrollView>
+        <Grid Margin="0" RowSpacing="0" ColumnSpacing="0" BackgroundColor="#FFFFFF">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="150"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="55"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition  Height="200" />
+                <RowDefinition Height="40"/>
+                <RowDefinition  Height="200" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition  />
+                <ColumnDefinition  />
+            </Grid.ColumnDefinitions>
+            <Frame    HorizontalOptions="Center"
+               VerticalOptions="Center" Grid.Row="0" Grid.ColumnSpan="2"
+               Padding="10" >
+                <Label Text="Reporte Grupal" HorizontalOptions="Center" FontSize="Title"  />
+            </Frame>
+            <Frame Grid.Row="1" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center">
+                <forms:ChartView x:Name="donutChartFirst" WidthRequest="500"  />
+
+            </Frame>
+            <Frame HorizontalOptions="StartAndExpand" VerticalOptions="Center" Grid.Row="1" Grid.Column="1">
+                <forms:ChartView x:Name="donutChartSecond" WidthRequest="500" />
+            </Frame>
+            <Label Text="40" HorizontalOptions="Center"  VerticalOptions="Start"  
+               Grid.Row="2" Grid.Column="0" BackgroundColor="Transparent" />
+            <Label Text="56" HorizontalOptions="Center" VerticalOptions="Start" 
+               Grid.Row="2" Grid.Column="1" BackgroundColor="Transparent" />
+            <Label Text="Personas detectadas " HorizontalOptions="Center"  VerticalOptions="Start" 
+               Grid.Row="3" Grid.Column="0" BackgroundColor="Transparent" />
+            <Label Text="Personas que invadierón tú espacio " HorizontalOptions="Center" VerticalOptions="Start" 
+               Grid.Row="3" Grid.Column="1" BackgroundColor="Transparent" />
+
+            <Frame BackgroundColor="#1E87FD"  CornerRadius="10" HorizontalOptions="Center"
+               VerticalOptions="Start" Grid.Row="4" Grid.ColumnSpan="2"
+               Padding="10" >
+                <Label Text="Personas detectadas" HorizontalOptions="End" TextColor="#FFFFFF"  />
+            </Frame>
+            <Frame Grid.Row="5" Grid.ColumnSpan="2" HorizontalOptions="Start" VerticalOptions="Start" >
+                <forms:ChartView x:Name="lineChartPrimero"  WidthRequest="500" HeightRequest="200" />
+            </Frame>
+
+            <Frame BackgroundColor="#1E87FD"  CornerRadius="10" HorizontalOptions="Center"
+               VerticalOptions="Start" Grid.Row="6" Grid.ColumnSpan="2"
+               Padding="10" >
+                <Label Text="Personas que invadierón tú espacio" HorizontalOptions="End" TextColor="#FFFFFF"  />
+            </Frame>
+            <Frame Grid.Row="7" Grid.ColumnSpan="2" HorizontalOptions="Start" VerticalOptions="Start" >
+                <forms:ChartView x:Name="lineChartSegundo"  WidthRequest="500" HeightRequest="200" />
+            </Frame>
+
+        </Grid>
+    </ScrollView>
+</ContentPage>
