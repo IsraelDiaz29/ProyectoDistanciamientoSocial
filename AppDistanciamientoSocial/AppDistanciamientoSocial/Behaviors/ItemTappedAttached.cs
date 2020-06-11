@@ -6,17 +6,17 @@ using Xamarin.Forms;
 
 namespace AppDistanciamientoSocial.Behaviors
 {
-   public class ItemTappedAttached
+    public class ItemTappedAttached
     {
         public static readonly BindableProperty CommandProperty =
-                BindableProperty.CreateAttached(
-                    propertyName: "Command",
-                    returnType: typeof(ICommand),
-                    declaringType: typeof(ListView),
-                    defaultValue: null,
-                    defaultBindingMode: BindingMode.OneWay,
-                    validateValue: null,
-                    propertyChanged: OnItemTappedChanged);
+            BindableProperty.CreateAttached(
+                propertyName: "Command",
+                returnType: typeof(ICommand),
+                declaringType: typeof(ListView),
+                defaultValue: null,
+                defaultBindingMode: BindingMode.OneWay,
+                validateValue: null,
+                propertyChanged: OnItemTappedChanged);
 
         public static ICommand GetItemTapped(BindableObject bindable)
         {
