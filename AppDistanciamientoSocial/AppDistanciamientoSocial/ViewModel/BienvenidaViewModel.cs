@@ -22,7 +22,10 @@ namespace AppDistanciamientoSocial.ViewModel
             NextPageCommand = new Command(async () =>
             {
 
+                
                 await Navigation.PushModalAsync(new SeleccionarCuenta(),false);
+                
+
             });
         }
 
