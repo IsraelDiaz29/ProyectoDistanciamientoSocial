@@ -5,5 +5,13 @@
              x:Class="AppDistanciamientoSocial.App">
     <Application.Resources>
 
+        <ResourceDictionary>
+
+            <OnPlatform x:Key="Lob" x:TypeArguments="x:String">
+                <On Platform="Android" Value="Lobster-Regular.ttf#Lobster-regular"/>
+            </OnPlatform>
+
+        </ResourceDictionary>
+
     </Application.Resources>
 </Application>
