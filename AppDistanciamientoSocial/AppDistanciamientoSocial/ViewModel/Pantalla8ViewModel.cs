@@ -25,7 +25,6 @@ namespace AppDistanciamientoSocial.ViewModel
         public async void Confirmar(int name)
         {
             //Cadena interpolada.
-
             string url = $"https://webapidistanciamientosocial20200610040741.azurewebsites.net/api/empresa?idEmpresa={name}";
             var client = new HttpClient();
             client.BaseAddress = new Uri(url);
@@ -36,8 +35,10 @@ namespace AppDistanciamientoSocial.ViewModel
                 await response.Content.ReadAsStringAsync();
             if (jsonResult != null)
             {
-                await Navigation.PushAsync(new PrincipalPage().MainPage, false);
+                AppShell app = new AppShell();
+                App.Current.MainPage = app;
             }
+            
 
         }
 
