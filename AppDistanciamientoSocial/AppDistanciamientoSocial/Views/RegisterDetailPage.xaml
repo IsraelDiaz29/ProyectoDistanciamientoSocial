@@ -5,7 +5,9 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:controls="clr-namespace:AppDistanciamientoSocial.Control"
              xmlns:views="clr-namespace:AppDistanciamientoSocial.Views"
-             xmlns:autocomplete="clr-namespace:Syncfusion.SfAutoComplete.XForms;assembly=Syncfusion.SfAutoComplete.XForms" xmlns:behaviorsPack="clr-namespace:Xamarin.Forms.BehaviorsPack;assembly=Xamarin.Forms.BehaviorsPack"
+             xmlns:autocomplete="clr-namespace:Syncfusion.SfAutoComplete.XForms;assembly=Syncfusion.SfAutoComplete.XForms" 
+             xmlns:behaviorsPack="clr-namespace:Xamarin.Forms.BehaviorsPack;assembly=Xamarin.Forms.BehaviorsPack"
+             xmlns:local="clr-namespace:AppDistanciamientoSocial.Behaviors"
              x:Class="AppDistanciamientoSocial.Views.RegisterDetailPage"
             Title="Registros">
     <StackLayout>
@@ -58,7 +60,9 @@
         </Grid>
 
         <ListView ItemsSource="{Binding Employees}"
-                  RowHeight="80">
+                  RowHeight="80"
+                  ItemSelected="OnItemSelected">
+                  
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -72,12 +76,14 @@
                                         <ColumnDefinition></ColumnDefinition>
                                         <ColumnDefinition></ColumnDefinition>
                                     </Grid.ColumnDefinitions>
+                                  
                                     <Label
                                 Text="{Binding strNombre} "
                                 HorizontalOptions="CenterAndExpand"
                                 VerticalOptions="CenterAndExpand"
                                 FontSize="13"
                                 TextColor="Black"
+                                        Grid.Column="0"
                                 ></Label>
                                     <Label
                                 Text="{Binding strAPaterno} "
@@ -98,6 +104,7 @@
                                         FlexLayout.AlignSelf="Center"
                                         FlexLayout.Grow="1"
                                         Grid.Column="3" 
+                                                 Grid.ColumnSpan="2"
                                          >
                                         <VisualStateManager.VisualStateGroups>
                                             <VisualStateGroup x:Name="CommonStates">
@@ -119,40 +126,7 @@
                                             </VisualStateGroup>
                                         </VisualStateManager.VisualStateGroups>
                                     </ImageButton>
-                                    <ImageButton Source="trash.png"
-                                                  Command="{Binding DeleterCommand}"
-                                       CommandParameter="{Binding idEmployee}"
-                                                 Clicked="ImageButton_Clicked"
-                                        BackgroundColor="Transparent"
-                                        WidthRequest="20"
-                                        HeightRequest="20"
-                                        Aspect="AspectFit"
-                                         HorizontalOptions="CenterAndExpand"
-                                         VerticalOptions="CenterAndExpand"
-                                        FlexLayout.AlignSelf="Center"
-                                        FlexLayout.Grow="1"
-                                        Grid.Column="4" 
-                                         >
-                                        <VisualStateManager.VisualStateGroups>
-                                            <VisualStateGroup x:Name="CommonStates">
-                                                <VisualState x:Name="Normal">
-                                                    <VisualState.Setters>
-                                                        <Setter Property="Scale"
-                            Value="1" />
-                                                    </VisualState.Setters>
-                                                </VisualState>
-
-                                                <VisualState x:Name="Pressed">
-                                                    <VisualState.Setters>
-                                                        <Setter Property="Scale"
-                            Value="0.8" />
-                                                        
-                                                    </VisualState.Setters>
-                                                </VisualState>
-
-                                            </VisualStateGroup>
-                                        </VisualStateManager.VisualStateGroups>
-                                    </ImageButton>
+                                  
 
                                 </Grid>
                             </StackLayout>

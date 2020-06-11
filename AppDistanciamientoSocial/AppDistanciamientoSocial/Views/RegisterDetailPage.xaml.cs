@@ -28,6 +28,12 @@ namespace AppDistanciamientoSocial.Views
             this.BindingContext = ViewModel;
         }
 
+        async void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            BindingContext = e.SelectedItem as Employee;
+            await Navigation.PushAsync(new PersonalDetail(e.SelectedItem as Employee));
+           
+        }
         private async void Cell_OnAppearing(object sender, EventArgs e)
         {
             var cell = sender as ViewCell;
@@ -45,11 +51,6 @@ namespace AppDistanciamientoSocial.Views
 
         }
 
-        private async Task ImageButton_ClickedAsync(object sender, EventArgs e)
-        {
-            ViewModel = new RegisterDetailPageViewModel();
-            await ViewModel.Deleter();
-            this.BindingContext = ViewModel;
-        }
+       
     }
 }
